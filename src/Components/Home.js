@@ -1,9 +1,14 @@
+import { useNavigate } from "react-router-dom";
 
+const Home = () => {
+  const navigate = useNavigate();
 
-export const Home = () => {
   return (
-    <div>Home Page</div>
-  )
-}
+    <>
+      <div>Home Page</div>
+      <button onClick={() => navigate("order-summary")}>Place Order</button>
+    </>
+  );
+};
 
-export default Home
+export default Home;
